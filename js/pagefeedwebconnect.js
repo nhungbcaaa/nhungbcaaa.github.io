@@ -213,8 +213,8 @@ function Logout() {
           var entry = {
             'page_name': currentPage.name,
             'page_likes': currentPage.country_page_likes,
-            'Page New Likes': currentPage.new_like_count,
-            'Page Talking About': currentPage.talking_about_count,
+            'page_new_likes': currentPage.new_like_count,
+            'page_talking_about': currentPage.talking_about_count,
             'page_id': currentPage.id,
             'page_link': currentPage.link,
             'message': data[ii].message,

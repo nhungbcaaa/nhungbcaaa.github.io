@@ -107,27 +107,7 @@ function Logout() {
             'message': data[ii].message,
             'caption': data[ii].caption,
             'created_time': created_time,
-            'description': data[ii].description,
-            'icon': data[ii].icon,
-            'post_id': data[ii].id,
-            'is_expired': data[ii].is_expired,
-            'is_hidden': data[ii].is_hidden,
-            'link': data[ii].link,
-            'name': data[ii].name,
-            'picture': data[ii].picture,
-            'source': data[ii].source,
-            'status_type': data[ii].status_type,
-            'subscribed': data[ii].subscribed,
-            'type': data[ii].type,
-            'updated_time': updated_time,
-            'application_name': ifexists(data[ii], 'application.name'),
-            'application_id': ifexists(data[ii], 'application.id'),
-            'from_category': ifexists(data[ii], 'from.category'),
-            'from_id': ifexists(data[ii], 'from.id'),
-            'from_name': ifexists(data[ii], 'from.name'),
-            'Post Shares': ifexists(data[ii], 'shares.count'),
-            'Post Likes': totalLikes,
-            'Post Comments (Top Level)': totalComments
+            'description': data[ii].description
           };
           tableData.push(entry);
         };
