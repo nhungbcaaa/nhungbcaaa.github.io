@@ -36,6 +36,7 @@ function Login() {
 function getData(access_token) {
   tableau.connectionData = access_token; // set pageInfo as the connection data so we can get to it when we fetch the data
   tableau.connectionName = 'Facebook User Feed' // name the data source. This will be the data source name in Tableau
+  tableau.password = access_token
   tableau.submit();
 }
 

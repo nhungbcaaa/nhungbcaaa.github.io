@@ -117,7 +117,8 @@ function getData(access_token, page_id) {
     };
 
     tableau.connectionData = JSON.stringify(pageInfo); // set pageInfo as the connection data so we can get to it when we fetch the data
-    tableau.connectionName = 'Facebook Page Feed'; // name the data source. This will be the data source name in Tableau
+    tableau.connectionName = 'Facebook Page Feed';
+    tableau.password = access_token // name the data source. This will be the data source name in Tableau
     tableau.submit();
   });
 }
