@@ -249,12 +249,12 @@ function Logout() {
         dataType: tableau.dataTypeEnum.float
       },
       {
-        id: "Page New Likes",
+        id: "page_new_likes",
         alias: "Page new likes",
         dataType: tableau.dataTypeEnum.float
       },
       {
-        id: "Page Talking About",
+        id: "page_talking_about",
         alias: "Page Talking About",
         dataType: tableau.dataTypeEnum.float
       },
@@ -277,16 +277,11 @@ function Logout() {
         id: "caption",
         alias: "caption",
         dataType: tableau.dataTypeEnum.string
-      },
-      {
-        id: "created_time",
-        alias: "latitude",
-        dataType: tableau.dataTypeEnum.string
       }
     ];
 
     var tableInfo = {
-      id: "facebookPageFeed",
+      id: "facebook_page_feed",
       alias: "Facebook page Feed",
       columns: cols
     };

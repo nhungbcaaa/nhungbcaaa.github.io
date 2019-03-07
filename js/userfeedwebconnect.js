@@ -168,7 +168,7 @@ function Logout() {
     ]
     // tableau.headersCallback(fieldNames, fieldTypes); // tell tableau about the fields and their types
     var tableInfo = {
-      id: "facebookUserFeed",
+      id: "facebook_user_feed",
       alias: "Facebook user Feed",
       columns: cols
     };
