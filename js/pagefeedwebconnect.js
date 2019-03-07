@@ -173,7 +173,8 @@ function Logout() {
           var newPageCount = pageCount + 1;
           var newPageUri = buildUrl(newPageCount, page_response);
 
-          getDataForPage(table, doneCallback, newPageUri, pageInfo, newPageCount)
+          //getDataForPage(table, doneCallback, newPageUri, pageInfo, newPageCount)
+          doneCallback()
         }
       } else {
         var data = feed_response.data;
@@ -226,7 +227,8 @@ function Logout() {
         };
         table.appendRows(tableData);
         var paging_next = feed_response.paging.next
-        getDataForPage(table, doneCallback, paging_next, pageInfo, pageCount)
+        // getDataForPage(table, doneCallback, paging_next, pageInfo, pageCount)
+        doneCallback()
       }
     })
   }
