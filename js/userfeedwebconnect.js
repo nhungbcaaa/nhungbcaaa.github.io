@@ -141,6 +141,11 @@ function Logout() {
   }
 
   var myConnector = tableau.makeConnector();
+  myConnector.init = function(initCallback) {
+    tableau.authType = tableau.authTypeEnum.custom;
+
+    initCallback();
+  };
   myConnector.getSchema = function(schemaCallback) {
     var fieldNames = ['message', 'caption', 'created_time', 'description', 'icon', 'post_id', 'is_expired', 'is_hidden', 'link', 'name', 'picture', 'source', 'status_type', 'subscribed', 'type', 'updated_time', 'application_name', 'application_id', 'from_category', 'from_id', 'from_name', 'Post Shares', 'Post Likes', 'Post Comments (Top Level)'];
     var fieldTypes = ['string', 'string', 'datetime', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'bool', 'string', 'datetime', 'string', 'float', 'string', 'float', 'string', 'float', 'float', 'float'];

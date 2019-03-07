@@ -231,6 +231,12 @@ function Logout() {
 
   var myConnector = tableau.makeConnector();
 
+  myConnector.init = function(initCallback) {
+    tableau.authType = tableau.authTypeEnum.custom;
+
+    initCallback();
+  };
+
   myConnector.getSchema = function(schemaCallback) {
     var fieldNames = ['page_name', 'page_likes', 'Page New Likes', 'Page Talking About', 'page_id', 'page_link', 'message', 'caption', 'created_time', 'description', 'icon', 'post_id', 'is_expired', 'is_hidden', 'link', 'name', 'picture', 'source', 'status_type', 'subscribed', 'type', 'updated_time', 'application_name', 'application_id', 'from_id', 'from_name', 'Post Shares', 'Post Likes', 'Post Comments (Top Level)'];
 
